@@ -24,7 +24,7 @@ export type NovelSettings = {
 export function getConfig(): NovelSettings {
   const config = vscode.workspace.getConfiguration("Novel");
 
-  const draftFileType = config.get<string>("general.filetype", ".txt");
+  const draftFileType = config.get<string>("general.filetype", ".novel");
   const lineHeightRate = 1.75;
   const fontFamily = config.get<string>("preview.fontFamily", "serif");
   const writingDirection =

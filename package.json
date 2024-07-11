@@ -1,6 +1,6 @@
 {
   "name": "novel-writer",
-  "version": "2.2.1",
+  "version": "3.0.0",
   "publisher": "TaiyoFujii",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "icon": "resource/icon.png",
   "engines": {
-    "vscode": "^1.90.0"
+    "vscode": "^1.91.0"
   },
   "main": "dist/extension.js",
   "dependencies": {
@@ -37,8 +37,7 @@
     "watch-web": "webpack --watch"
   },
   "activationEvents": [
-    "onLanguage:markdown",
-    "onLanguage:plaintext"
+    "onLanguage:novel"
   ],
   "contributes": {
     "commands": [
@@ -100,8 +99,7 @@
       {
         "id": "novel",
         "extensions": [
-          ".txt",
-          ".md"
+          ".novel"
         ],
         "configuration": "./novel.language-configuration.json"
       }
@@ -118,10 +116,9 @@
       "properties": {
         "Novel.general.filetype": {
           "type": "string",
-          "default": ".txt",
+          "default": ".novel",
           "enum": [
-            ".txt",
-            ".md"
+            ".novel"
           ],
           "description": "原稿のファイルの拡張子を指定してください\n原稿ツリーや文字数カウントは再読み込みを行うまで反映されません"
         },
